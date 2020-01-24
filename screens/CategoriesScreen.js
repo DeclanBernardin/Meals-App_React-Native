@@ -3,7 +3,7 @@ import { View, Text, FlatList,  StyleSheet, TouchableOpacity, Platform} from 're
 
 import { CATEGORIES } from '../data/dummy-data'; 
 import Colors from '../constants /Colors'
-import { SyntheticPlatformEmitter } from '@unimodules/core';
+
 
 
 
@@ -11,7 +11,10 @@ const CategoriesScreen = props => {
     const renderGridItem = (itemData) => {
         return (
             <TouchableOpacity style={styles.gridItem} onPress={() => {
-                props.navigation.navigate({routeName: 'CategoryMeals'});
+                props.navigation.navigate({routeName: 'CategoryMeals', params: {
+                    categoryId: itemData.item.id
+                }
+            });
             }}>
                 <View>
                     <Text>{itemData.item.title}</Text>
