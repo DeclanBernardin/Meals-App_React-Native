@@ -11,20 +11,19 @@ import MealDetailScreen from '../screens/MealDetailScreen';
 const MealsNavigator = createStackNavigator({
  Categories: {
      screen: CategoriesScreen,
-     navigationOptions: {
-         headerTitle: 'Meal Categories'
-     }
  },
  CategoryMeals: {
      screen: CategoriesMealsScreen,
  },
  MealDetail: MealDetailScreen,
 }, {
+    mode: 'modal',
  defaultNavigationOptions: {
      headerStyle: {
          backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : ''
      },
      headerTintColor: Platform.OS === 'android' ? 'white' : Colors.primaryColor,
+     headerTitle: 'A Screen'
  }
 });
 
