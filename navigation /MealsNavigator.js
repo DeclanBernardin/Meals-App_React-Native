@@ -81,11 +81,27 @@ createMaterialBottomTabNavigator(tabScreenConfig, {
 
 const FiltersNavigator = createStackNavigator({
     Filters: FiltersScreen
+}, {
+    // navigationOptions: {
+    //     drawerLabel: 'Filters'
+    // },
+    mode: 'modal',
+    defaultNavigationOptions: defaultStackNavOptions
 }); 
 
 const MainNavigator = createDrawerNavigator({
-    MealsFavs: MealsFavTabNavigator, 
+    MealsFavs: {screen: MealsFavTabNavigator,
+         navigationOptions: {
+        drawerLabel: 'Meals'
+    }}, 
     Filters: FiltersNavigator
+}, {
+    contentOptions: {
+        activeTintColor: Colors.accentColor,
+        labelStyle: {
+            fontFamily: 'open-sans-bold'
+        }
+    }
 });
 
 
