@@ -60,9 +60,10 @@ const styles = StyleSheet.create({
 
     }, 
     title: {
-        fontFamily: 'open-sans-bold',
+        fontFamily: 'open-sans',
         fontSize: 22,
-        textAlign: 'center'
+        textAlign: 'center',
+        fontWeight: 'bold',
     },
     listItem: {
         marginVertical: 10,
