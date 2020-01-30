@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
         fontFamily: 'open-sans',
         fontSize: 22,
         textAlign: 'center',
-        fontWeight: 'bold',
+        
     },
     listItem: {
         marginVertical: 10,
