@@ -9,7 +9,7 @@ import MealList from '../components /MealList'
 
 const FavoritesScreen = props => {
 
-    const availableMeals = useSelector(state => state.meals.favoriteMeals);
+    const favMeals = useSelector(state => state.meals.meals);
 
     return <MealList listData={favMeals} navigation={props.navigation} />;
 
@@ -18,7 +18,7 @@ const FavoritesScreen = props => {
 FavoritesScreen.navigationOptions = (navData) => {
     return {
         headerTitle: 'Your Favorites',
-        headerLeft: (
+        headerRight: (
             <HeaderButtons HeaderButtonComponent={HeaderButton}>
                 <Item title="Menu" iconName='ios-menu' onPress={() => {
                     navData.navigation.toggleDrawer();

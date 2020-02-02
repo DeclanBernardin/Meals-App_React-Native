@@ -20,7 +20,8 @@ const defaultStackNavOptions = {
         backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : ''
     },
     headerTitleStyle: {
-        fontFamily: 'open-sans-bold'
+        fontFamily: 'open-sans',
+        fontWeight: 'bold'
     },
     headerBackTitleStyle: {
         fontFamily: 'open-sans'
@@ -59,7 +60,7 @@ const tabScreenConfig = {
                 return (<Ionicons name='ios-restaurant' size={25} color={tabInfo.tintColor} />);
             },
             tabBarColor: Colors.primaryColor,
-            tabBarLabel: Platform.OS === 'android' ? <Text style={{fontFamily: 'open-sans-bold'}}>Meals</Text> : 'Meals'
+            tabBarLabel: Platform.OS === 'android' ? <Text style={{fontFamily: 'open-sans', fontWeight: 'bold'}}>Meals</Text> : 'Meals'
         }
     },
     Favorites: {
@@ -70,7 +71,7 @@ const tabScreenConfig = {
                 return (<Ionicons name='ios-star' size={25} color={tabInfo.tintColor} />);
             },
             tabBarColor: Colors.accentColor,
-            tabBarLabel: Platform.OS === 'android' ? <Text style={{ fontFamily: 'open-sans-bold' }}>Favorites</Text> : 'Favorites'
+            tabBarLabel: Platform.OS === 'android' ? <Text style={{ fontFamily: 'open-sans', fontWeight: 'bold' }}>Favorites</Text> : 'Favorites'
         }
     }
 }; 
@@ -113,7 +114,8 @@ const MainNavigator = createDrawerNavigator({
     contentOptions: {
         activeTintColor: Colors.accentColor,
         labelStyle: {
-            fontFamily: 'open-sans-bold'
+            fontFamily: 'open-sans',
+            fontWeight: 'bold'
         }
     }
 });

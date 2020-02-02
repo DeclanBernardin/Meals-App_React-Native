@@ -17,12 +17,13 @@ const rootReducer = combineReducers({
 
 const store = createStore(rootReducer);
 
+
 const fetchFonts = () => {
   Font.loadAsync({
     'open-sans': require('./assets/fonts/OpenSans-Regular.ttf'),
-    
   });
 };
+
 
 export default function App() {
   const [fontLoaded, setFontLoaded] = useState(false);
